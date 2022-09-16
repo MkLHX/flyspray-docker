@@ -14,8 +14,8 @@ RUN docker-php-ext-install mysqli exif pdo gd zip pdo_mysql mysqli
 
 
 RUN echo "<VirtualHost *:80> \n DocumentRoot /var/www/html/flyspray \n </VirtualHost>" >  /etc/apache2/sites-available/000-default.conf
-    
-    
+
+
 
 #RUN curl -s -L https://github.com/Flyspray/flyspray/archive/master.tar.gz  -O
 #RUN tar -xf master.tar.gz -C /var/www/html/ && \
@@ -45,6 +45,3 @@ RUN cd /var/www/html/flyspray/ && \
     touch flyspray.conf.php && chmod 666 flyspray.conf.php && \
     chmod -R  777 setup && \
     chmod +x /usr/local/bin/docker-php-entrypoint
-
-
-
